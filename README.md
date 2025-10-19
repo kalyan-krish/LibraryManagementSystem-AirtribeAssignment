@@ -2,7 +2,7 @@
 
 1. Functional Requirements:
 
-a) Book Management:
+a)Book Management:
     Implement a Book class with attributes such as title, author, ISBN, and publication year.
 
     Create a system to add, remove, and update books in the library inventory.
@@ -21,9 +21,34 @@ c)Lending Process
 
   Implement book checkout and return functionalities.
 
-  Inventory Management
+d)Inventory Management
 
   Keep track of available and borrowed books.
+
+
+2) Additional or Optional Extension:
+
+   a) Multi-branch Support
+
+    Modify your system to support multiple library branches.
+
+    Design a system for transferring books between branches.
+
+   b) Reservation System
+
+    Allow patrons to reserve books that are currently checked out.
+
+    Implement a notification system for when reserved books become available.
+
+   c) Recommendation System
+
+    Implement a book recommendation system based on patron borrowing history and preferences.
+
+
+     
+
+
+
 
 
   
