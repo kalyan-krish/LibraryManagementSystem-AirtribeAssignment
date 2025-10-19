@@ -45,7 +45,14 @@ d)Inventory Management
     Implement a book recommendation system based on patron borrowing history and preferences.
 
 
-     
+### Design Patterns Used
+
+* **Factory Pattern:** For creating Book and Patron objects.
+* **Observer Pattern:** For notifying patrons about reserved books.
+* **Strategy Pattern:** For recommendation engine.
+
+
+
 
 
 
