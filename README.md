@@ -114,6 +114,9 @@ LibraryException handles errors like missing books, branches, or patrons.
 Uses java.util.logging to log key events: book added, checkout, return, reservation, transfer.
 
 
+class Diagram:
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/f15ec1b3-e88d-4d7f-901a-9b453403e694" />
 
 
 
