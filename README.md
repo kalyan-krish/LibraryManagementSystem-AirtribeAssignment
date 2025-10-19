@@ -51,63 +51,65 @@ d)Inventory Management
 * **Observer Pattern:** For notifying patrons about reserved books.
 * **Strategy Pattern:** For recommendation engine.
 
-Book Class
+Interaction flow and relationships
 
-Represents a book with title, authors, ISBN, publicationYear, and optional tags.
+1) Book Class
 
-Supports getters, setters, and toString().
+  Represents a book with title, authors, ISBN, publicationYear, and optional tags.
 
-Patron Class
+  Supports getters, setters, and toString().
 
-Represents a library member.
+2) Patron Class
 
-Tracks currentlyBorrowed books and borrowingHistory.
+  Represents a library member.
 
-Implements Observer via notify() to receive reservation notifications.
+  Tracks currentlyBorrowed books and borrowingHistory.
 
-InventoryRecord Class
+  Implements Observer via notify() to receive reservation notifications.
 
-Tracks total copies, borrowed copies, and available copies for each book in a branch.
+3) InventoryRecord Class
 
-Provides methods for checkout, return, add/remove copies.
+    Tracks total copies, borrowed copies, and available copies for each book in a branch.
 
-LibraryBranch Class
+    Provides methods for checkout, return, add/remove copies.
 
-Manages branch-specific inventory and reservations.
+4) LibraryBranch Class
 
-Provides checkout(), returnBook(), reserveBook(), and transferTo() methods.
+    Manages branch-specific inventory and reservations.
 
-Implements Observer pattern: notifies patrons in reservation queue when books become available.
+    Provides checkout(), returnBook(), reserveBook(), and transferTo() methods.
 
-Library Class
+    Implements Observer pattern: notifies patrons in reservation queue when books become available.
 
-Manages multiple branches and patrons.
+5) Library Class
 
-Provides high-level operations like checkoutBook(), returnBook(), and transferBook().
+    Manages multiple branches and patrons.
 
-Delegates branch-specific tasks to LibraryBranch.
+    Provides high-level operations like checkoutBook(), returnBook(), and transferBook().
 
-Factories (BookFactory & PatronFactory)
+    Delegates branch-specific tasks to LibraryBranch.
 
-Implements Factory Pattern for creating Book and Patron objects.
+    Factories (BookFactory & PatronFactory)
 
-Recommendation Engine
+    Implements Factory Pattern for creating Book and Patron objects.
 
-Uses Strategy Pattern: RecommendationStrategy interface with pluggable strategies.
+6) Recommendation Engine
 
-Example: MostBorrowedRecommendation recommends popular books not yet borrowed by a patron.
+    Uses Strategy Pattern: RecommendationStrategy interface with pluggable strategies.
 
-Reservation & Notification
+    Example: MostBorrowedRecommendation recommends popular books not yet borrowed by a patron.
+
+7) Reservation & Notification
 
 Patrons can reserve unavailable books.
 
 LibraryBranch keeps a queue of reservations per book and notifies next patron when a copy is returned.
 
-Exceptions
+8) Exceptions
 
 LibraryException handles errors like missing books, branches, or patrons.
 
-Logging
+9) Logging
 
 Uses java.util.logging to log key events: book added, checkout, return, reservation, transfer.
 
